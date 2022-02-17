@@ -1,4 +1,4 @@
-RUN_CMD="cd /app && g++ main.cpp && ./a.out"
+RUN_CMD="cd /app && g++ main.cppt && ./a.out"
 CONTAINER_NAME="mooveit_challenge"
 if [ ! $(docker ps -q -f name="^${CONTAINER_NAME}$") ]; then
 docker build docker -t $CONTAINER_NAME
