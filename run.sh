@@ -6,6 +6,7 @@ docker build docker -t $CONTAINER_NAME
 docker run -dit --rm \
   --name $CONTAINER_NAME \
   -v $PWD/src:/app \
+  -v $PWD/curlcpp:/app/curlcpp \
   $CONTAINER_NAME bash
 fi
 

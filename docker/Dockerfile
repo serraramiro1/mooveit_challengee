@@ -5,7 +5,7 @@ LABEL description="Mooveit challenge"
 WORKDIR /app
 
 # install build dependencies 
-RUN apt-get update && apt-get install -y g++ rsync zip cmake make
+RUN apt-get update && apt-get install -y g++ rsync zip cmake make curl libcurl4-openssl-dev
 
 
 # expose port 22 

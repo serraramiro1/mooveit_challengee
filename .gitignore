@@ -3,3 +3,4 @@ src/build/
 src/Makefile
 src/*.cmake
 src/mooveit_challenge
+.vscode/
