@@ -1,5 +1,6 @@
 #include <iostream>
-#include "curlcpp/include/curl_easy.h"
+#include "curl_easy.h"
+#include "json.hpp"
 
 
 int main(){
