@@ -4,3 +4,4 @@ src/Makefile
 src/*.cmake
 src/mooveit_challenge
 .vscode/
+**.out
