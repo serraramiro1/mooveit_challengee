@@ -1,7 +1,9 @@
 #pragma once
 #include <stdint.h>
-#include <string_view>
 #include <iostream>
+#include <string.h>
+#include <sstream>      // std::stringstream
+
 namespace moovit
 {
     struct Date
@@ -10,7 +12,7 @@ namespace moovit
         uint16_t month;
         uint16_t day;
 
-        // constructs a Date object from a stringview of the form "YYYY-MM-DD"
+        // constructs a Date object from a string of the form "YYYY-MM-DD"
         static Date FromString(const std::string &str)
         {
             Date ret;
@@ -36,15 +38,24 @@ namespace moovit
                     std::stringstream err{"Invalid date format: "};
                     err << str;
                     throw std::runtime_error(err.str());
-                    break;
                 }
                 ++cnt;
             }
             return ret;
         }
+
+        bool operator<(const Date& rhs) const
+        {
+            return year < rhs.year || month < rhs.month || day < rhs.day;
+        }
+        bool operator>(const Date& rhs) const
+        {
+            return year < rhs.year || month < rhs.month || day < rhs.day;
+        }
     };
-    std::ostream& operator<<(std::ostream& os, const Date& date){
-        os << "Date: " << date.year << "-" << date.month << "-" << date.day << std::endl;;
+    std::ostream &operator<<(std::ostream &os, const Date &date)
+    {
+        os << "Date: " << date.year << "-" << date.month << "-" << date.day << std::endl;
         return os;
     }
 } // moovit

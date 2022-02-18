@@ -34,4 +34,5 @@ std::ostream& operator<<(std::ostream& os, const Car& car){
     os << "Car: " << car.name << std::endl <<"- Creation date: " << car.date << "- Acceleration " << car.acceleration << std::endl;;
     return os;
 }
+
 }//moovit
