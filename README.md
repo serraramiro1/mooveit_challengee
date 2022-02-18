@@ -1,6 +1,6 @@
 # Requirements:
 
-Docker installed and correctly setup, see [here]("https://docs.docker.com/engine/install/ubuntu/")
+Docker installed and correctly setup, see [here](https://docs.docker.com/engine/install/ubuntu/)
 
 
 ## Instructions:
