@@ -9,7 +9,6 @@
 #include <unordered_set>
 #include <queue>
 
-
 namespace moovit
 {
     class App
@@ -32,9 +31,8 @@ namespace moovit
         uint16_t GetResponseCode() const;
         Car GetFastestCarFromJsonData(const nlohmann::json &js) const;
         std::unordered_set<std::string> GetUniqueBrandsFromJsonData(const nlohmann::json &js) const;
-        static CLI_OPTION OptionFromString(const std::string& str);
+        static CLI_OPTION OptionFromString(const std::string &str);
         const std::string kDataURL{"https://raw.githubusercontent.com/vega/vega/master/docs/data/cars.json"};
     };
-
 
 } // moovit

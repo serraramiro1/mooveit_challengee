@@ -15,14 +15,16 @@
 "Year":"1982-01-01"}
 
 */
-namespace moovit{
-struct Car{
-    std::string name;
-    Date date;
-    float acceleration;
+namespace moovit
+{
+    struct Car
+    {
+        std::string name;
+        Date date;
+        float acceleration;
 
-    static Car FromJson(const nlohmann::json& js);
-};
-std::ostream& operator<<(std::ostream& os, const Car& car);
+        static Car FromJson(const nlohmann::json &js);
+    };
+    std::ostream &operator<<(std::ostream &os, const Car &car);
 
-}//moovit
+} // moovit

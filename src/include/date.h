@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include <iostream>
 #include <string.h>
-#include <sstream>      // std::stringstream
+#include <sstream> // std::stringstream
 
 namespace moovit
 {
@@ -15,8 +15,8 @@ namespace moovit
         // constructs a Date object from a string of the form "YYYY-MM-DD"
         static Date FromString(const std::string &str);
 
-        bool operator<(const Date& rhs) const;
-        bool operator>(const Date& rhs) const;
+        bool operator<(const Date &rhs) const;
+        bool operator>(const Date &rhs) const;
     };
     std::ostream &operator<<(std::ostream &os, const Date &date);
 } // moovit

@@ -1,6 +1,7 @@
 #include "app.h"
 
-int main(){
+int main()
+{
   moovit::App app;
   app.Run();
   return 0;
